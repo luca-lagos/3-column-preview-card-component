@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  background-color: var(--very-light-gray);
+}
+
+main {
+  margin: auto;
+}
+
+#car-panel {
+  display: flex;
+  flex-direction: row;
+  padding: 50px auto 50px auto;
+  margin-bottom: 50px;
+}
+
+#car-panel .car-card {
+  background-color: var(--dark-cyan);
+  padding: 25px 50px 25px 50px;
+  width: 300px;
+  height: auto;
+}
+
+#car-panel .car-card:first-child {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+#car-panel .car-card:last-child {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#car-panel .car-card img {
+  width: 55px;
+  margin: 25px auto 25px auto;
+}
+
+#car-panel .car-card h1 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin-bottom: 25px;
+  font-size: 35px;
+}
+
+#car-panel .car-card p,
+#car-panel .car-card a,
+.attribution {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+#car-panel .car-card p {
+  font-size: 13px;
+  color: var(--transparent-white);
+  line-height: 180%;
+  margin-bottom: 75px;
+}
+
+#car-panel .car-card a {
+  text-decoration: none;
+  width: 130px;
+  padding: 15px 20px 15px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  background-color: var(--very-light-gray);
+  display: block;
+  border-radius: 25px;
+  border: 2px solid var(--very-light-gray);
+  margin-bottom: 20px;
+  color: var(--dark-cyan);
+  transition: all 0.4s ease;
+}
+
+#car-panel .car-card a:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+}
+
+#car-panel .car-card:first-child a {
+  color: var(--bright-orange);
+}
+
+#car-panel .car-card:first-child a:hover {
+  color: var(--very-light-gray);
+}
+
+#car-panel .car-card:last-child a {
+  color: var(--very-dark-cyan);
+}
+
+#car-panel .car-card:last-child a:hover {
+  color: var(--very-light-gray);
+}
+
+@media (max-width: 940px) {
+  #car-panel .car-card {
+    width: 250px;
+  }
+}
+
+@media (max-width: 780px) {
+  #car-panel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  #car-panel .car-card {
+    width: 300px;
+  }
+
+  #car-panel .car-card:first-child {
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 0px;
+  }
+
+  #car-panel .car-card:last-child {
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+  }
+
+  .attribution{
+      width: 250px;
+      margin: auto;
+      margin-bottom: 50px;
+  }
+}
